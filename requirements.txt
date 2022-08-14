@@ -1,0 +1,11 @@
+Flask==1.1.2
+Flask-RESTful==0.3.9
+Flask-SQLAlchemy==2.5.1
+passlib==1.7.4
+pyparsing==2.4.7
+requests==2.26.0
+SQLAlchemy==1.4.25
+sqlparse==0.4.1
+timeout-decorator==0.5.0
+urllib3==1.26.7
+Werkzeug==1.0.1
