@@ -1,6 +1,14 @@
 # Membership-API
 This is the original membership API that I created for my level 4 software developer coursework, which attained a distinction. 
 
+
+
+[**Words words**](linklink)<br>
+
+
+
+
+
 ## Design
 The synoptic project that I am completing is Project E, the RESTful membership system API. The requirements are as follows.
 Requirements
@@ -132,6 +140,7 @@ In the design of the API it could be addressed by utilising different methods, s
 Reliability comes down to how long the system can operate without failures. This is important because when multiple systems are utilising an API, a user base needs it to operate as close to 100% during the operating times of the overall system. If a system had low reliability (e.g. short time between failures) then that could impact the service level agreements or targets set by the team/company. If the API is not reliable in this instance it ultimately means a poor customer service and could lead to complaints and an unhappy workforce.
 
 Ways to deal with this include implementing an effective logging and monitoring system in place, so that we can track and look for when the API is failing to try and improve it. 
+
 
 
 ### Diagrams
