@@ -19,7 +19,7 @@ From the business requirements provided I created several user stories (includin
 
 | User story | Detail | Acceptance criteria |
 | --- | --- | --- |
-| As an employee, I want to register my card, so that I can use my account. | In order to use the kiosk terminals, first the customer must be able to register their card at the terminals for future use. When doing this they will provide a number of personal details to authenticate who they are. They will have a new registered account, but if the wrong data type is used then it will throw an error message. | The personal details to be provided are: their employee ID, full name, company email, a mobile number and their own pin to access the services. A POST HTTP method will be used, as well as extra information: Employee ID, Full name, Company email, Mobile number, A pin |
+| As an employee, \n I want to register my card, so that I can use my account. | In order to use the kiosk terminals, first the customer must be able to register their card at the terminals for future use. When doing this they will provide a number of personal details to authenticate who they are. They will have a new registered account, but if the wrong data type is used then it will throw an error message. | The personal details to be provided are: their employee ID, full name, company email, a mobile number and their own pin to access the services. A POST HTTP method will be used, as well as extra information: Employee ID, Full name, Company email, Mobile number, A pin |
 |  |  |  |
 |  |  |  |
 |  |  |  |
