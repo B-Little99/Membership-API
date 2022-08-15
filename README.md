@@ -130,42 +130,53 @@ With any project, there are always improvements that could be made. These improv
 **Immediate improvements**
 
 *Add admin authorisation*
+
 An immediate improvement would be to add an extra database table for admin credentials to be stored. It could be used in conjunction with a registered account password for access to the collection GET method to view all employees. This provides extra security through an added authorisation layer. There should also be extra methods to provide more use to admins, such as a DELETE and PUT method so that the admins can do more to administer the kiosk account information.
 
 *Implement wider timeout usage and investigate docker issues*
+
 More immediate improvements include the implementation of the timeout function across all HTTP methods and investigating the docker issues, so that I can run the API on docker containers.
 
 *Clarify the business requirements*
+
 Another improvement would be to clarify requirements with a business stakeholder. It seemed unclear if the product should include a method to update account balances, as requirements stated the product should be used to register and top up with money. However, it mentioned the IT team handling transactions. By understanding from transparency and clarity what they want, we can remove the functionality or keep it to keep the code clean.
 
 *Document more programming language examples*
+
 An immediate task that would improve the product is by adding additional programming languages to the documentation, as this would cater to a wider range of technical abilities within the company and make it more usable for the customer developers.
 
 **Short term improvements**
 
 *Set up a feedback meeting*
+
 One of the short term improvements would be to hold a feedback meeting with the first catering IT developers to gather their input and find out any outstanding issues. This can be used to inform the product backlog for the API. 
 
 *Implement caching*
+
 Another improvement that would have a big impact is setting up a caching system, so that the most commonly requested HTTP methods can be stored so future requests can be serviced more efficiently than just sending the request to the server. This would improve the efficiency and latency of the API.
 
 *Set up rate limiting*
+
 To ensure that the API service does not get overwhelmed and cause performance issues a good short term improvement would be to enforce a request limit, so that only requests coming from the company IP address will be valid. This would mean that any external requests would not proceed. 
 
 **Medium term improvements**
 
 *Set up API monitoring*
+
 Implementing a monitoring system so that data can be gathered about the use metrics of the API, which can be analysed and fed into the continued improvement and development of the API as part of the company API strategy. The data could be used to inform the API strategy or it could be used to set one up.
 
 *Security review*
+
 After more improvements have been made to the API and there is a more stable version available, then there should be a full security review. This review would include looking at the top 10 security vulnerabilities for APIs and seeing if the developed product could be susceptible to these security issues. 
 
 **Long term improvements**
 
 *Implement AI analysis*
+
 One long term improvement would be to implement AI analysis on monitoring systems that  have gathered data on the API usage, for predicting future usage but also to help detect suspicious activity that could be a malicious attack by a third party.
 
 *Create a face recognition system*
+
 A significant improvement for the long term versioning of this API would be to create a face recognition system, so that it would improve the security and verify the person trying to do something with their account.
 
 
