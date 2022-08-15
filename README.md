@@ -13,6 +13,11 @@ This is the original membership API that I created for my level 4 software devel
    - [**Diagrams**](#Diagrams)<br>
    - [**Words words**](#linklink)<br>
 - [**API documentation**](#API-documentation)<br>
+   - [**Overview**](#Overview)<br>
+   - [**HTTP methods & endpoints**](#HTTP-methods-&-endpoints)<br>
+   - [**Query string parameters**](#Query-string-parameters)<br>
+   - [**HTTP status codes used**](#HTTP-status-codes-used)<br>
+   - [**Example request/responses**](#Example-request/responses)<br>
 
 
 ## Design
