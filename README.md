@@ -4,15 +4,15 @@ This is the original membership API that I created for my level 4 software devel
 
 ## Table of contents
 
-[**Design**](#Design)<br>
-    [**User stories**](#User-stories)<br>
-    [**Assumptions**](#Assumptions)<br>
-    [**Extra assumptions**](#Extra-assumptions)<br>
-    [**Additional requirements**](#Additional-requirements)<br>
-    [**Non functional requirements**](#Non-functional-requirements)<br>
-    [**Diagrams**](#Diagrams)<br>
-    [**Words words**](#linklink)<br>
-[**API documentation**](#API-documentation)<br>
+- [**Design**](#Design)<br>
+   - [**User stories**](#User-stories)<br>
+   - [**Assumptions**](#Assumptions)<br>
+   - [**Extra assumptions**](#Extra-assumptions)<br>
+   - [**Additional requirements**](#Additional-requirements)<br>
+   - [**Non functional requirements**](#Non-functional-requirements)<br>
+   - [**Diagrams**](#Diagrams)<br>
+   - [**Words words**](#linklink)<br>
+- [**API documentation**](#API-documentation)<br>
 
 
 ## Design
