@@ -25,20 +25,7 @@ From the business requirements provided I created several user stories (includin
 | As an employee, I want a goodbye message, so I know I have logged out of the kiosk. | For the customer to know they have logged out correctly, they should see a goodbye message. | When the kiosk makes a second call with appropriate information being provided, the following logout message should appear: “Goodbye.” After this point another employee can use the kiosk terminal. |
 | As an admin, I want to see all registered employees, so I can carry out admin duties. | In order for the product to be maintained, it needs to allow functionality for an admin with higher privileges to access all the data (with pagination too). This will allow the admin role to keep an accurate record of the registered employees. | A GET HTTP method will be used on the registered accounts database table, in order to retrieve and format the employee information in a set format for the admin to view. A pin password will be required. A 2xx HTTP status code will be returned with the results (which will be attained through a database query). |
 | As a developer, I want to dockerise this product, so functionality can be reused across systems in the future. | In the future the company that develops this solution may get other contracts to interface with systems, so it will need to work across operating systems in an isolated environment with all its dependencies. | An appropriate docker file will be created, and the docker file will be built to test that the containerised app will run. |
-|  |  |  |
-
-
-
-
-
-
-
-As a employee, 
-I want my account password to be secure,
-So that nobody else can access my information
-In order to ensure the security of the employee accounts we need to be able to use an algorithm to encrypt employee password data. This would mean that the password needs to be salted with an additional word and then hashed using a strong hash function.
-When registering a new account the password pin provided by the employee will be salted and hashed using the SHA-256 hashing algorithm, submitting the hashed value to the database. When a user tries to log in it will then go through a verification process where it takes in the pin and hashes it and compares it to the stored hash value to determine if the password is correct or not.
-
+| As a employee, I want my account password to be secure, so that nobody else can access my information | In order to ensure the security of the employee accounts we need to be able to use an algorithm to encrypt employee password data. This would mean that the password needs to be salted with an additional word and then hashed using a strong hash function. | When registering a new account the password pin provided by the employee will be salted and hashed using the SHA-256 hashing algorithm, submitting the hashed value to the database. When a user tries to log in it will then go through a verification process where it takes in the pin and hashes it and compares it to the stored hash value to determine if the password is correct or not. |
 
 
 ### Assumptions
