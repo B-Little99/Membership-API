@@ -7,7 +7,7 @@ This is the original membership API that I created for my level 4 software devel
   [**Assumptions**](#Assumptions)<br>
   [**Extra assumptions**](#Extra-assumptions)<br>
   [**Additional requirements**](#Additional-requirements)<br>
-  [**Non functional requirements**](#Non functional-requirements)<br>
+  [**Non functional requirements**](#Non-functional-requirements)<br>
   [**Diagrams**](#Diagrams)<br>
   [**Words words**](#linklink)<br>
 [**API documentation**](#API-documentation)<br>
@@ -64,7 +64,7 @@ One additional requirement is the admin role, with functionality to view data us
 #### Password salt/hashing
 Another additional requirement I have added is the secure hashing and salting of passwords, so that they are not stored in plain text which is bad security practice. This will ensure that we use a high quality SHA algorithm and salt the password before hashing so that people's accounts can be more secure than if they were in plain text. This will ensure that the security non-functional requirement can be addressed.
 
-### Non functional requirements
+### Non-functional requirements
 There are also a number of non-functional requirements that impact the successful delivery of the solution. The non-functional requirements enable developers to know how a system should work, whereas functional requirements describe what a system should do.
 
 #### Performance
