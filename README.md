@@ -2,6 +2,8 @@
 This is the original membership API that I created for my level 4 software developer coursework, which attained a distinction. 
 
 
+## Table of contents
+
 [**Design**](#Design)<br>
   [**User stories**](#User-stories)<br>
   [**Assumptions**](#Assumptions)<br>
