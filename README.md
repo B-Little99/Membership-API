@@ -206,4 +206,123 @@ Please note, that this API does not support trailing backslashes at the end of r
 #### Example request/responses
 
 
+**GET /api/V1/helloworld**
+Example curl:
+```
+curl --location --request GET 'http://127.0.0.1:5000/api/V1/helloworld'
+```
+Example response:
+```
+{
+    "data": "Hello world!"
+}
+```
 
+
+**Register a new account**
+Example curl:
+```
+curl --location --request POST 'http://127.0.0.1:5000/api/V1/employees?id=88&employeeID=88&name=post tester&email=test@url.com&mobileNumber=07415074042&accountBalance=0&pinPassword=1234'
+```
+Example response:
+```
+{
+    "httpCode": 201,
+    "message": "Thank you for registering your new account."
+}
+```
+
+
+**Get a list of all employees**
+Example curl:
+```
+curl --location --request GET 'http://127.0.0.1:5000/api/V1/employees?employeeID=88&pinPassword=1234'
+```
+Example response:
+```
+[
+    {
+        "id": 1,
+        "employeeID": 19,
+        "name": "Test Name",
+        "email": "test@url.com",
+        "mobileNumber": "07415293847",
+        "accountBalance": 0,
+        "pinPassword": "$pbkdf2-sha256$29000$zllrbS3F.F/L.X8v5TwnJA$ISR9gzDuoKZKNuzMECXsdhFmqDKEyV.TK.4xeaAC2Eo"
+    },
+    {
+        "id": 2,
+        "employeeID": 10,
+        "name": "Test Name",
+        "email": "test@url.com",
+        "mobileNumber": "07415293847",
+        "accountBalance": 0,
+        "pinPassword": "$pbkdf2-sha256$29000$OUfIWUvpXQvBmFNKaY1Rag$wRRpccdAFFw3wHyWR5UjAPktDbB3iIuN/fouZNUA7IY"
+    },
+    {
+        "id": 3,
+        "employeeID": 11,
+        "name": "Test Name",
+        "email": "test@url.com",
+        "mobileNumber": "07415293847",
+        "accountBalance": 0,
+        "pinPassword": "$pbkdf2-sha256$29000$6T1nDCGk9P6/t9Z6b22tNQ$mpDO4DC.xHVmmk/pLnXonUjlpVa4n3YLkjs5byj.0fM"
+    }
+]
+```
+
+
+**Custom login message**
+Example curl:
+```
+curl --location --request GET 'http://127.0.0.1:5000/api/V1/employees/66?employeeID=66&pinPassword=1234&context=welcomeMessage'
+```
+Example response:
+```
+{
+    "httpCode": 200,
+    "message": "Welcome to your account NEW Little."
+}
+```
+
+
+**Goodbye message**
+Example curl:
+```
+curl --location --request GET 'http://127.0.0.1:5000/api/V1/employees/66?employeeID=66&pinPassword=1234&context=goodbyeMessage'
+```
+Example response:
+```
+{
+    "httpCode": 200,
+    "message": "Goodbye."
+}
+```
+
+
+**Deposit to account balance**
+Example curl:
+```
+curl --location --request PUT 'http://127.0.0.1:5000/api/V1/employees/19?employeeID=19&pinPassword=4321&funds=200&fundType=deposit'
+```
+Example response:
+```
+{
+    "httpCode": 200,
+    "message": "Request successful. The account has been updated."
+}
+```
+
+
+**Purchase with account balance**
+Example curl:
+```
+curl --location --request PUT 'http://127.0.0.1:5000/api/V1/employees/19?employeeID=19&pinPassword=4321&funds=150&fundType=withdraw'
+```
+Example response:
+```
+{
+    "httpCode": 200,
+    "message": "Request successful. The account has been updated."
+}
+```
