@@ -2,11 +2,15 @@
 This is the original membership API that I created for my level 4 software developer coursework, which attained a distinction. 
 
 
-
-[**Words words**](linklink)<br>
-
-
-
+[**Design**](#Design)<br>
+  [**User stories**](#User stories)<br>
+  [**Assumptions**](#Assumptions)<br>
+  [**Extra assumptions**](#Extra assumptions)<br>
+  [**Additional requirements**](#Additional requirements)<br>
+  [**Non functional requirements**](#Non functional requirements)<br>
+  [**Diagrams**](#Diagrams)<br>
+  [**Words words**](#linklink)<br>
+[**API documentation**](#API documentation)<br>
 
 
 ## Design
@@ -44,7 +48,7 @@ Since this RESTful web service needs to follow industry standards, I assume it w
 - HTTP status codes - when there is an error/action, either on the server side or the client side, there should be appropriate and meaningful use of HTTP status codes, such as 2xx codes for successful requests, 4xx codes for client errors and 5xx codes for server errors.
 
 
-#### Extra assumptions
+### Extra assumptions
 It is not explicitly clear if the existing IT department is handling the updating of account balances through the API or not. It would seem illogical to have a RESTful API for registering and topping up money without the ability to top up and use the money on the account. 
 
 What I assume is meant by the background information is that the existing IT department will handle how any physical money is registered on the kiosk client side. From the business requirements, it states they want a RESTful web service for registering and topping up money, so I assume they still want the functionality to update account balances. 
