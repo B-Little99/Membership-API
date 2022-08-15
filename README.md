@@ -106,11 +106,88 @@ The above data model shows how the database should be constructed and what data 
 
 
 ## API documentation
+This section discusses the results of my work, including the limitations of the design/implementation, the proposed future improvements and a user guide for developers. 
+
+
+### Limitations
+Any initial release of a product will have its own limitations. With this API the limitations range from a lack of monitoring to security based limitations.
+
+One limitation is the docker container does not run due to the external passwords.py file import blocking the container from running, because it expects password to be a module when I am actually trying to import another file. This issue will need to be investigated as a future improvement. Due to the time constraints the timeout is not on every HTTP method, which will need to be expanded in the future so it is implemented on every HTTP method for the API.
+
+One area of limitation is security. While the API supports salting and hashing of passwords, it does not currently support multi-factor authentication, which can pose a security risk when utilising a public facing endpoint like with APIs as there is one less authentication layer. There are multiple attacks that can be done to harm an API or its company, such as DDoS attacks. These types of malicious attacks can be protected against by rate limiting (setting the max API calls within a specified time) to manage network traffic better, but this is not implemented in the current design which could lead to a cyber attack.
+
+At this point in time there are no caching abilities, due to the limited timeframe. This would be a great addition to the API, because it could provide a smoother customer journey so that common information can be stored and used before attempting to contact the host server. This would result in quicker results being provided and lower API latency, but because it is not yet implemented it could decrease overall performance slightly.
+
+The data format provided is only in JSON. It would be ideal to also include XML and potentially CSV, as it could mean that if an old legacy system needed to use the API it would have an easier time working with the API.
+
+Another limitation is that at this current point there are no monitoring/analytics that gather data behind the usage of the API. This could be important to the business to see uptake of the API and therefore the service and could also help determine where there are errors, which could be used to improve the service further.
 
 
 
+### Future improvements
+With any project, there are always improvements that could be made. These improvements can be categorised into immediate (actions that require prompt delivery for functionality/security upgrades), short term (actions that will not take much time to investigate), medium term (actions that may require some time to investigate) and long term (actions that will take a considerable amount of time to research) improvements.
+
+**Immediate improvements**
+
+*Add admin authorisation*
+An immediate improvement would be to add an extra database table for admin credentials to be stored. It could be used in conjunction with a registered account password for access to the collection GET method to view all employees. This provides extra security through an added authorisation layer. There should also be extra methods to provide more use to admins, such as a DELETE and PUT method so that the admins can do more to administer the kiosk account information.
+
+*Implement wider timeout usage and investigate docker issues*
+More immediate improvements include the implementation of the timeout function across all HTTP methods and investigating the docker issues, so that I can run the API on docker containers.
+
+*Clarify the business requirements*
+Another improvement would be to clarify requirements with a business stakeholder. It seemed unclear if the product should include a method to update account balances, as requirements stated the product should be used to register and top up with money. However, it mentioned the IT team handling transactions. By understanding from transparency and clarity what they want, we can remove the functionality or keep it to keep the code clean.
+
+*Document more programming language examples*
+An immediate task that would improve the product is by adding additional programming languages to the documentation, as this would cater to a wider range of technical abilities within the company and make it more usable for the customer developers.
+
+**Short term improvements**
+
+*Set up a feedback meeting*
+One of the short term improvements would be to hold a feedback meeting with the first catering IT developers to gather their input and find out any outstanding issues. This can be used to inform the product backlog for the API. 
+
+*Implement caching*
+Another improvement that would have a big impact is setting up a caching system, so that the most commonly requested HTTP methods can be stored so future requests can be serviced more efficiently than just sending the request to the server. This would improve the efficiency and latency of the API.
+
+*Set up rate limiting*
+To ensure that the API service does not get overwhelmed and cause performance issues a good short term improvement would be to enforce a request limit, so that only requests coming from the company IP address will be valid. This would mean that any external requests would not proceed. 
+
+**Medium term improvements**
+
+*Set up API monitoring*
+Implementing a monitoring system so that data can be gathered about the use metrics of the API, which can be analysed and fed into the continued improvement and development of the API as part of the company API strategy. The data could be used to inform the API strategy or it could be used to set one up.
+
+*Security review*
+After more improvements have been made to the API and there is a more stable version available, then there should be a full security review. This review would include looking at the top 10 security vulnerabilities for APIs and seeing if the developed product could be susceptible to these security issues. 
+
+**Long term improvements**
+
+*Implement AI analysis*
+One long term improvement would be to implement AI analysis on monitoring systems that  have gathered data on the API usage, for predicting future usage but also to help detect suspicious activity that could be a malicious attack by a third party.
+
+*Create a face recognition system*
+A significant improvement for the long term versioning of this API would be to create a face recognition system, so that it would improve the security and verify the person trying to do something with their account.
 
 
+### API V1 User Guider
+
+
+#### Overview
+The First Catering Membership API V1 is the first version of a RESTful web service that works on a predictable URI structure. The API returns structured JSON data or appropriate error messages, through the use of HTTP verbs across the two main endpoints (/employees and /employees/<int:employeeID>).
+
+Please note, that this API does not support trailing backslashes at the end of requests.
+
+
+#### HTTP methods & endpoints
+
+
+#### Query string parameters
+
+
+#### HTTP status codes used
+
+
+#### Example request/responses
 
 
 
