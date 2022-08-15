@@ -207,6 +207,7 @@ Please note, that this API does not support trailing backslashes at the end of r
 
 
 **GET /api/V1/helloworld**
+
 Example curl:
 ```
 curl --location --request GET 'http://127.0.0.1:5000/api/V1/helloworld'
@@ -220,6 +221,7 @@ Example response:
 
 
 **Register a new account**
+
 Example curl:
 ```
 curl --location --request POST 'http://127.0.0.1:5000/api/V1/employees?id=88&employeeID=88&name=post tester&email=test@url.com&mobileNumber=07415074042&accountBalance=0&pinPassword=1234'
@@ -234,6 +236,7 @@ Example response:
 
 
 **Get a list of all employees**
+
 Example curl:
 ```
 curl --location --request GET 'http://127.0.0.1:5000/api/V1/employees?employeeID=88&pinPassword=1234'
@@ -273,6 +276,7 @@ Example response:
 
 
 **Custom login message**
+
 Example curl:
 ```
 curl --location --request GET 'http://127.0.0.1:5000/api/V1/employees/66?employeeID=66&pinPassword=1234&context=welcomeMessage'
@@ -287,6 +291,7 @@ Example response:
 
 
 **Goodbye message**
+
 Example curl:
 ```
 curl --location --request GET 'http://127.0.0.1:5000/api/V1/employees/66?employeeID=66&pinPassword=1234&context=goodbyeMessage'
@@ -301,6 +306,7 @@ Example response:
 
 
 **Deposit to account balance**
+
 Example curl:
 ```
 curl --location --request PUT 'http://127.0.0.1:5000/api/V1/employees/19?employeeID=19&pinPassword=4321&funds=200&fundType=deposit'
@@ -315,6 +321,7 @@ Example response:
 
 
 **Purchase with account balance**
+
 Example curl:
 ```
 curl --location --request PUT 'http://127.0.0.1:5000/api/V1/employees/19?employeeID=19&pinPassword=4321&funds=150&fundType=withdraw'
