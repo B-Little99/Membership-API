@@ -19,77 +19,20 @@ From the business requirements provided I created several user stories (includin
 
 | User story | Detail | Acceptance criteria |
 | --- | --- | --- |
-| As an employee, \n I want to register my card, so that I can use my account. | In order to use the kiosk terminals, first the customer must be able to register their card at the terminals for future use. When doing this they will provide a number of personal details to authenticate who they are. They will have a new registered account, but if the wrong data type is used then it will throw an error message. | The personal details to be provided are: their employee ID, full name, company email, a mobile number and their own pin to access the services. A POST HTTP method will be used, as well as extra information: Employee ID, Full name, Company email, Mobile number, A pin |
+| As an employee, I want to register my card, so that I can use my account. | In order to use the kiosk terminals, first the customer must be able to register their card at the terminals for future use. When doing this they will provide a number of personal details to authenticate who they are. They will have a new registered account, but if the wrong data type is used then it will throw an error message. | The personal details to be provided are: their employee ID, full name, company email, a mobile number and their own pin to access the services. A POST HTTP method will be used, as well as extra information: Employee ID, Full name, Company email, Mobile number, A pin. This information will be committed to the account database so the employee can use the account in the future. If the employee provides all of the correct arguments required, it will insert the new details and provide a thank you message. If the employee is in the company database and in the registered table and tries to re-register, it will come up with an error message to explain they already have an account. At all stages of the POST method appropriate HTTP status codes will be returned. |
+| As an employee, I want to top up or use account credit, so that I can buy food. | In order for a registered account to use the kiosk terminals to top up the account, they will need to be able to top up or withdraw credit from their account in order to purchase food or add more credit. | A PUT HTTP method will be used, and will require the following parameters: Employee ID - for identification of what account to update. Funds - to know what value to update with. Fund type - to know if the funds should be added or taken away from the account. Pin password for security. The PUT method will also mean the new value of the account balance is committed to the database. In addition to the above, there should also be appropriate error messages. In the instance that the employee ID is not registered in the database when trying to make a transaction, it should error out with a custom message to alert the user to register first. If the employee is trying to buy food that is more than the account balance for their account, then it will error out and let the customer know they do not have the funds to complete the transaction. Appropriate status codes will be provided for both correct and incorrect usage of the API. |
+| As an employee, I want a custom welcome message, so that I know I have logged into the system. | For the customer to be certain they have correctly tapped their card onto the kiosk, it should provide a custom welcome message that features their name. | A login message should appear in the format: “Welcome to your account {name}.”, before allowing the employee to continue with an action. |
+| As an employee, I want a goodbye message, so I know I have logged out of the kiosk. | For the customer to know they have logged out correctly, they should see a goodbye message. | When the kiosk makes a second call with appropriate information being provided, the following logout message should appear: “Goodbye.” After this point another employee can use the kiosk terminal. |
+| As an admin, I want to see all registered employees, so I can carry out admin duties. | In order for the product to be maintained, it needs to allow functionality for an admin with higher privileges to access all the data (with pagination too). This will allow the admin role to keep an accurate record of the registered employees. | A GET HTTP method will be used on the registered accounts database table, in order to retrieve and format the employee information in a set format for the admin to view. A pin password will be required. A 2xx HTTP status code will be returned with the results (which will be attained through a database query). |
+| As a developer, I want to dockerise this product, so functionality can be reused across systems in the future. | In the future the company that develops this solution may get other contracts to interface with systems, so it will need to work across operating systems in an isolated environment with all its dependencies. | An appropriate docker file will be created, and the docker file will be built to test that the containerised app will run. |
 |  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
 
 
-As an employee, I want to register my card, so that I can use my account.
-In order to use the kiosk terminals, first the customer must be able to register their card at the terminals for future use. When doing this they will provide a number of personal details to authenticate who they are. They will have a new registered account, but if the wrong data type is used then it will throw an error message.
-The personal details to be provided are: their employee ID, full name, company email, a mobile number and their own pin to access the services.
-A POST HTTP method will be used, as well as extra information:
- - Employee ID
-Full name
-Company email
-Mobile number
-A pin
-
-This information will be committed to the account database so the employee can use the account in the future.
-
-If the employee provides all of the correct arguments required, it will insert the new details and provide a thank you message.
-
-If the employee is in the company database and in the registered table and tries to re-register, it will come up with an error message to explain they already have an account.
-
-At all stages of the POST method appropriate HTTP status codes will be returned.
-As an employee,
-I want to top up or use account credit,
-So that I can buy food.
-In order for a registered account to use the kiosk terminals to top up the account, they will need to be able to top up or withdraw credit from their account in order to purchase food or add more credit.
-A PUT HTTP method will be used, and will require the following parameters:
-Employee ID - for identification of what account to update
-Funds - to know what value to update with
-Fund type - to know if the funds should be added or taken away from the account
-Pin password for security
-
-The PUT method will also mean the new value of the account balance is committed to the database.
-
-In addition to the above, there should also be appropriate error messages. In the instance that the employee ID is not registered in the database when trying to make a transaction, it should error out with a custom message to alert the user to register first.
-
-If the employee is trying to buy food that is more than the account balance for their account, then it will error out and let the customer know they do not have the funds to complete the transaction. 
-
-Appropriate status codes will be provided for both correct and incorrect usage of the API.
-As an employee,
-I want a custom welcome message, 
-So that I know I have logged into the system.
-For the customer to be certain they have correctly tapped their card onto the kiosk, it should provide a custom welcome message that features their name. 
-A login message should appear in the format: “Welcome to your account {name}.”, before allowing the employee to continue with an action.
 
 
-As an employee,
-I want a goodbye message 
-So I know I have logged out of the kiosk.
-For the customer to know they have logged out correctly, they should see a goodbye message.
-When the kiosk makes a second call with appropriate information being provided, the following logout message should appear: “Goodbye.” After this point another employee can use the kiosk terminal.
-As an employee,
-I want the system to timeout,
-So if I forget to log out nobody will use my credit.
-If an employee forgets to tap their registered card a second time, then there needs to be a timeout after 2 minutes of no activity (no server activity).
-After 240 seconds of no activity (no response from the server for the specified action) the kiosk will time out ready for the next user to log in.
-As an admin,
-I want to see all registered employees,
-So I can carry out admin duties.
-In order for the product to be maintained, it needs to allow functionality for an admin with higher privileges to access all the data (with pagination too). This will allow the admin role to keep an accurate record of the registered employees.
-A GET HTTP method will be used on the registered accounts database table, in order to retrieve and format the employee information in a set format for the admin to view. A pin password will be required. A 2xx HTTP status code will be returned with the results (which will be attained through a database query). 
-As a developer,
-I want to dockerise this product,
-So functionality can be reused across systems in the future.
-In the future the company that develops this solution may get other contracts to interface with systems, so it will need to work across operating systems in an isolated environment with all its dependencies.
-An appropriate docker file will be created, and the docker file will be built to test that the containerised app will run.
+
+
+
 As a employee, 
 I want my account password to be secure,
 So that nobody else can access my information
