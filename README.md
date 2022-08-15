@@ -14,10 +14,10 @@ This is the original membership API that I created for my level 4 software devel
    - [**Words words**](#linklink)<br>
 - [**API documentation**](#API-documentation)<br>
    - [**Overview**](#Overview)<br>
-   - [**HTTP methods & endpoints**](#HTTP-methods-&-endpoints)<br>
+   - [**HTTP methods and endpoints**](#HTTP-methods-and-endpoints)<br>
    - [**Query string parameters**](#Query-string-parameters)<br>
    - [**HTTP status codes used**](#HTTP-status-codes-used)<br>
-   - [**Example request/responses**](#Example-request/responses)<br>
+   - [**Example request and responses**](#Example-request-and-responses)<br>
 
 
 ## Design
@@ -113,6 +113,12 @@ The above data model shows how the database should be constructed and what data 
 ## API documentation
 This section discusses the results of my work, including the limitations of the design/implementation, the proposed future improvements and a user guide for developers. 
 
+- [**Overview**](#Overview)<br>
+- [**HTTP methods and endpoints**](#HTTP-methods-and-endpoints)<br>
+- [**Query string parameters**](#Query-string-parameters)<br>
+- [**HTTP status codes used**](#HTTP-status-codes-used)<br>
+- [**Example request and responses**](#Example-request-and-responses)<br>
+
 
 ### Limitations
 Any initial release of a product will have its own limitations. With this API the limitations range from a lack of monitoring to security based limitations.
@@ -185,7 +191,7 @@ One long term improvement would be to implement AI analysis on monitoring system
 A significant improvement for the long term versioning of this API would be to create a face recognition system, so that it would improve the security and verify the person trying to do something with their account.
 
 
-### API V1 User Guider
+### API V1 User Guide
 
 
 #### Overview
@@ -194,7 +200,7 @@ The First Catering Membership API V1 is the first version of a RESTful web servi
 Please note, that this API does not support trailing backslashes at the end of requests.
 
 
-#### HTTP methods & endpoints
+#### HTTP methods and endpoints
 
 
 #### Query string parameters
@@ -203,7 +209,7 @@ Please note, that this API does not support trailing backslashes at the end of r
 #### HTTP status codes used
 
 
-#### Example request/responses
+#### Example request and responses
 
 
 **GET /api/V1/helloworld**
