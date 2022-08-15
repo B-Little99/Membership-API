@@ -111,11 +111,9 @@ The above data model shows how the database should be constructed and what data 
 ## API documentation
 This section discusses the results of my work, including the limitations of the design/implementation, the proposed future improvements and a user guide for developers. 
 
-- [**Overview**](#Overview)<br>
-- [**HTTP methods and endpoints**](#HTTP-methods-and-endpoints)<br>
-- [**Query string parameters**](#Query-string-parameters)<br>
-- [**HTTP status codes used**](#HTTP-status-codes-used)<br>
-- [**Example request and responses**](#Example-request-and-responses)<br>
+- [**Limitations**](#Limitations)<br>
+- [**Future improvements**](#Future-improvements)<br>
+- [**API V1 User Guide**](#API-V1-User-Guide)<br>
 
 
 ### Limitations
@@ -191,6 +189,11 @@ A significant improvement for the long term versioning of this API would be to c
 
 ### API V1 User Guide
 
+- [**Overview**](#Overview)<br>
+- [**HTTP methods and endpoints**](#HTTP-methods-and-endpoints)<br>
+- [**Query string parameters**](#Query-string-parameters)<br>
+- [**HTTP status codes used**](#HTTP-status-codes-used)<br>
+- [**Example request and responses**](#Example-request-and-responses)<br>
 
 #### Overview
 The First Catering Membership API V1 is the first version of a RESTful web service that works on a predictable URI structure. The API returns structured JSON data or appropriate error messages, through the use of HTTP verbs across the two main endpoints (/employees and /employees/<int:employeeID>).
