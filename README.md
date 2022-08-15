@@ -13,11 +13,9 @@ This is the original membership API that I created for my level 4 software devel
    - [**Diagrams**](#Diagrams)<br>
    - [**Words words**](#linklink)<br>
 - [**API documentation**](#API-documentation)<br>
-   - [**Overview**](#Overview)<br>
-   - [**HTTP methods and endpoints**](#HTTP-methods-and-endpoints)<br>
-   - [**Query string parameters**](#Query-string-parameters)<br>
-   - [**HTTP status codes used**](#HTTP-status-codes-used)<br>
-   - [**Example request and responses**](#Example-request-and-responses)<br>
+   - [**Limitations**](#Limitations)<br>
+   - [**Future improvements**](#Future-improvements)<br>
+   - [**API V1 User Guide**](#API-V1-User-Guide)<br>
 
 
 ## Design
